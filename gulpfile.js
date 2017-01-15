@@ -14,7 +14,7 @@ const gulp = require('gulp'),
   	styleSheet:['src/css/main.scss'],
   	scripts:['src/js/*.js','src/js/components/*.js', 'src/vendor/classList.min.js'],
   	images:['src/img/*.jpg', 'src/img/*.svg', 'src/img/**/*'],
-  	html:['src/*.html', 'src/**/*.html'],
+  	html:['src/*.html', 'src/**/*.html', 'src/**/*.svg'],
     info:['src/*.png', 'src/*.xml', 'src/*.ico', 'src/*.txt']
   },
   vendor = {
