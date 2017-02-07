@@ -47,7 +47,7 @@ gulp.task('build:styles',function(){
 	.pipe(sass({includePaths: require('node-neat').includePaths}).on('error', sass.logError));
 	if(flags.prod){
 		task = task.pipe(cleanCSS())
-		.pipe(concat('styles.min.css'));
+		.pipe(concat('main.min.css'));
 	}
 	task = task.pipe(gulp.dest(dest))
 	.pipe(connect.reload());
