@@ -158,7 +158,7 @@ $styleguide__color--value: #5A82BB;
   //     height: 125px;
   //     padding: $space--small $space;
   //     margin-bottom: $padding;
-  //     @include display(flex);
+  //     display: flex;
   //     @include align-items(flex-end);
   //     @include justify-content(flex-end);
   //   }
