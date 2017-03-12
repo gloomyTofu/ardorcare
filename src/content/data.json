@@ -2,15 +2,16 @@
   "title": "Ardor Care Company",
   "logo": "svg/ardor_care_logo.svg",
   "tagline": "Home Care Services",
+  "about": [
+    "Ardor Care Company is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.",
+    "Focusing on the experiences of caregiving and making it our collective center. We are able to provide  personalized care that reflects each individuals and families requisite.",
+    "We are committed to being a socially responsible business, it is our duty to put back into our local communities, create quality opportunities, and be the neighbor of choice."
+  ],
   "team": [
     "Our care team is bonded by our shared core values of caring with enthusiasm and passion.",
     "Whether you’re a busy family that needs a caregiver periodically, on a regular basis, or if you’re in a bind and need reliable care at the drop of a dime, we can help."
   ],
-  "about": [
-    "is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.",
-    "Focusing on the experiences of caregiving and making it our collective center. We are able to provide  personalized care that reflects each individuals and families requisite.",
-    "We are committed to being a socially responsible business, it is our duty to put back into our local communities, create quality opportunities, and be the neighbor of choice."
-  ],
+  "commitment": "We were founded based on the principle of improving the quality of caregiving for both care recipients and caregivers. It is important for us to be transparent to allow care recipients and families the best options possible for their home care service needs.",
   "contact": {
     "office": "425-278-9799",
     "toll": "877-778-9995",
@@ -27,6 +28,7 @@
   "services": [{
     "id": "childcare",
     "title": "childcare",
+    "short": "Customized in home child care",
     "rates": [{
       "header": "Sitter Services",
       "keypoints": "in-home child care",
@@ -36,6 +38,7 @@
   },{
     "id": "seniorcare",
     "title": "senior care",
+    "short": "Personalized home care services",
     "rates": [{
       "header": "Home Care Services",
       "keypoints": "non-medical caregiver",

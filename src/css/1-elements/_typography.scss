@@ -1,9 +1,46 @@
-.info, footer {
-  h1::after {
+.highlight {
+  color: $color__primary;
+}
+
+span.block {
+  display: block;
+}
+
+h1, .h1 {
+  font-size: 2em;
+  font-family: $font__primary;
+  font-weight: $font__weight;
+  margin-bottom: $space;
+}
+
+h1 {
+  &.descriptive {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+  }
+}
+
+.header--line {
+  margin-top: 0;
+
+  &::after {
     content: '';
     display: block;
     border-bottom: $space--small solid $color__primary;
     width: $space--large * 3;
-    padding-bottom: $space--medium; 
+    padding-bottom: $space--medium;
+  }
+}
+
+.flex {
+  &__col {
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__col--50 > p:first-child {
+    margin-top: $space--small;
   }
 }

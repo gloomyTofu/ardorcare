@@ -1,13 +1,63 @@
 .services {
-  height: 50vh;
-  display: flex; 
+  height: 42vh;
+  margin-top: $padding;
+  display: flex;
   align-items: center;
+  background-position: 50% 0;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+    z-index: 0;
+    background-color: $color__primary--dark;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  p {
+    line-height: 1;
+  }
 
   .content {
     align-items: center;
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-top: 1em;
   }
 
-  @include breakpoint(tablet__landscape) {
+  @include breakpoint(tablet__portrait) {
+    height: 50vh;
 
+    h1 {
+      font-size: 3em;
+      line-height: 1.3;
+    }
+
+    &.flex__col--50 {
+      margin: 2% 2%;
+      flex: 0 1 46%;
+    }
+
+    &.flex__col--50:last-child {
+      margin: 2% 0.5%;
+    }
   }
+}
+
+#childcare {
+  background-image: url(../img/services__childcare.jpg);
+}
+
+#seniorcare {
+  background-image: url(../img/services__seniorcare.jpg);
 }

@@ -15,7 +15,7 @@ const gulp = require('gulp'),
   	neither:['src/*.html', 'src/**/*.html'],
   	styles:['src/css/**/*.scss', 'src/css/*.scss'],
   	styleSheet:['src/css/main.scss'],
-  	scripts:['src/js/*.js','src/js/components/*.js', 'src/vendor/classList.min.js'],
+  	scripts:['src/js/*.js','src/js/components/*.js', 'src/vendor/classList.min.js', 'src/vendor/anime.js'],
   	images:['src/img/*.jpg', 'src/img/**/*'],
   	svgs:['src/**/*.svg'],
     info:['src/*.png', 'src/*.xml', 'src/*.ico', 'src/*.txt']

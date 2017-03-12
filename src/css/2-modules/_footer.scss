@@ -3,7 +3,7 @@ footer {
   background-color: $color__base;
 
   table.info__content {
-    margin: $space--medium 0 $space--large * 2;
+    margin: 0 0 $space--large * 2;
 
     td {
       padding-bottom: $space;
@@ -11,6 +11,10 @@ footer {
 
     td a {
       color: white;
+    }
+
+    @include breakpoint(tablet__portrait) {
+      margin-top: $space; 
     }
   }
 }

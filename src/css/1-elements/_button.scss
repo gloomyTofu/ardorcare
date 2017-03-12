@@ -12,9 +12,9 @@ button, .button, input[type="button"], input[type="submit"] {
   color: set-text-color($color__primary);
   background-color: $color__primary;
   margin: $space--medium 0;
-  padding: 0 $space--medium;
+  padding: 0 $space--large * 2;
   cursor: pointer;
-  transition: color 0.25s $ease-in-out-sine, background-color 0.25s $ease-in-out-sine;
+  transition: color 0.12s $ease-in-out-sine, background-color 0.12s $ease-in-out-sine;
 
   &::last-child {
     margin-left: $space;
@@ -29,5 +29,27 @@ button, .button, input[type="button"], input[type="submit"] {
     color: transparentize($color__font, 0.8);
     background-color: transparentize($color__primary, 0.8);
     cursor: default;
+  }
+}
+
+.button {
+  &--secondary {
+    color: set-text-color($color__secondary);
+    background-color: $color__secondary;
+
+    &:hover, &:focus {
+      color: set-text-color($color__secondary--light);
+      background-color: $color__secondary--light;
+    }
+  }
+
+  &--accent {
+    color: set-text-color($color__accent);
+    background-color: $color__accent;
+
+    &:hover, &:focus {
+      color: set-text-color($color__accent--dark);
+      background-color: $color__accent--dark;
+    }
   }
 }
