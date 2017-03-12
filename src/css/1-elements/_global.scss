@@ -23,3 +23,15 @@ section {
 .flex + section.info {
   margin-top: $space--large * 3;
 }
+
+@include breakpoint(tablet__portrait) {
+  section {
+    &.info {
+      padding-bottom: $space--large * 2;
+    }
+  }
+
+  .flex + section.info {
+    margin-top: $space--large * 2;
+  }
+}
