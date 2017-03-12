@@ -9,9 +9,15 @@
         <link rel='apple-touch-icon' href='apple-touch-icon.png'>
         <link rel="shortcut icon" href="ardorcare-favicon.ico" type="image/x-icon">
         <link rel='stylesheet' type='text/css'href='https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,500'>
-        <link rel='stylesheet' href='css/main.css'>
 
+        {% if prod %}
+        <link rel='stylesheet' href='css/main.min.css'>
+        <script src='js/vendor/vendor.min.js'></script>
+        {% else %}
+        <link rel='stylesheet' href='css/main.css'>
         <script src='js/vendor/vendor.js'></script>
+        {% endif %}
+
     </head>
     <body>
 
@@ -25,7 +31,11 @@
 
       {% endblock %}
 
+      {% if prod %}
+      <script src='js/main.min.js'></script>
+      {% else %}
       <script src='js/main.js'></script>
+      {% endif %}
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>

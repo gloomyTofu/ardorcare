@@ -1,4 +1,5 @@
 {
+  "prod": true,
   "title": "Ardor Care Company",
   "logo": "svg/ardor_care_logo.svg",
   "tagline": "Home Care Services",
