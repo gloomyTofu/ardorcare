@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Ardor Care Company Coming Soon
+{% endblock %}
+
+    {% block body %}
+      <main class="main">
+        <div class="main__contents">
+          <section>
+            <img src="{{ logo }}" alt="{{ title }} Logo"/>
+            <h1>Ardor</h1>
+            <p>
+              Care Company
+            </p>
+          </section>
+          <section class="message">
+            <h1>Site Coming Soon</h1>
+          </section>
+          <section class="info">
+            {% include "partials/contact.html" %}
+          </section>
+        </div>
+      </main>
+    {% endblock %}

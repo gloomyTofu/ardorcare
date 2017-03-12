@@ -1,0 +1,101 @@
+section {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 $padding;
+  max-width: $max-width;
+
+  &__col {
+    width: 100%;
+    flex: 1 0 auto;
+    padding: $padding;
+    box-sizing: border-box;
+  }
+
+  &__mobile {
+    flex-direction: row;
+  }
+
+  &.content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  @include for-IE-only {
+    display: block;
+  }
+
+  @include breakpoint(tablet__portrait) {
+    flex-direction: row;
+  }
+}
+
+@include breakpoint(tablet__portrait) {
+  .flex {
+    &__col {
+      padding: 0;
+      margin: $gutter*2 $gutter $gutter;
+      flex: 1 0 auto; // IE Fix
+    }
+
+    &__col--2 {
+      margin: 0;
+      padding: $gutter*2 $gutter $gutter;
+      flex: 0 1 50%;
+    }
+  }
+}
+
+// Col Numbers
+@for $i from 1 through 12 {
+  @include breakpoint(tablet__portrait) {
+    .flex__col-width--#{$i} {
+      max-width: 10% * $i;
+    }
+  }
+
+  @include breakpoint(desktop)  {
+    .flex__col-width--#{$i} {
+      max-width: ($column * $i) + ($gutter * $i);
+    }
+
+    .flex__col-left--#{$i} {
+      margin-left: ($column * $i) + ($gutter * $i);
+    }
+
+    .flex__col-right--#{$i} {
+      margin-right: ($column * $i) + ($gutter * $i);
+    }
+  }
+}
+
+@include for-IE-only {
+
+  @include breakpoint(tablet__portrait) {
+    .flex__col {
+      flex: 1 0 48%; // IE Fix
+    }
+  }
+}
+
+// Child Positioning
+.flex__col {
+  &--top {
+    align-self: flex-start;
+    margin-top: $gutter*2;
+  }
+
+  &--center {
+    align-self: center;
+  }
+
+  &--bottom {
+    align-self: flex-end;
+    margin-bottom: $gutter*4;
+  }
+}

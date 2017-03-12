@@ -1,0 +1,44 @@
+table.info__content {
+  tr {
+    vertical-align: baseline;
+
+    &.address td {
+      padding-top: 22px;
+    }
+  }
+
+  td {
+    text-align: left;
+    font-family: $font__primary;
+    font-weight: $font__weight;
+
+    &:first-child {
+      text-align: center;
+      font-weight: $font__weight--bold;
+      padding-right: $space--small; 
+
+      @include breakpoint(mobile) {
+        min-width: 1.5em;
+      }
+
+      min-width: 3em;
+
+      @include breakpoint(tablet__portrait) {
+        min-width: 2em;
+      }
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+
+      span.email:after {
+        content:'@';
+      }
+    }
+
+    address {
+      font-style: normal;
+    }
+  }
+}

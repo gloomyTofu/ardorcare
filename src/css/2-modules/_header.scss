@@ -1,0 +1,45 @@
+.header {
+  border-bottom: 1px solid $color__base--border;
+
+  &__logo {
+    width: 50px;
+    height: 41px;
+    padding: $space $space $space $padding;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color__font;
+    align-items: center;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: $font__weight;
+
+    span {
+      font-size: 14px;
+      font-family: $font__secondary;
+      font-weight: $font__weight--light;
+      text-transform: lowercase;
+      display: block;
+    }
+  }
+
+  @include breakpoint(tablet__portrait) {
+    &__logo {
+      width: 60px;
+      height: 51px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    h1 span {
+      font-size: 16px;
+    }
+  }
+}

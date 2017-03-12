@@ -1,0 +1,13 @@
+.services {
+  height: 50vh;
+  display: flex; 
+  align-items: center;
+
+  .content {
+    align-items: center;
+  }
+
+  @include breakpoint(tablet__landscape) {
+
+  }
+}

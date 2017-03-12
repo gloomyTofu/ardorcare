@@ -1,8 +1,16 @@
 $space--small: 5px;
 $space: 10px;
 $space--medium: 15px;
+$space--large: 25px;
 
 $padding: 1em;
+
+
+// GRID
+$gutter: 2%;
+$column: 6%;
+
+$max-width: 1300px;
 
 // BUTTONS
 $button--height: 40px;
@@ -23,7 +31,7 @@ $color__accent--light: lighten($color__accent, 20%);
 $color__accent--dark: darken($color__accent, 20%);
 
 // VARIATIONS OF GRAY
-$color__base: #22333B; 
+$color__base: #22333B;
 $color__base--border: #CCCCCC;
 $color__base--highlight: #EFEFEF;
 

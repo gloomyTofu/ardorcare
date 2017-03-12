@@ -1,0 +1,9 @@
+.info, footer {
+  h1::after {
+    content: '';
+    display: block;
+    border-bottom: $space--small solid $color__primary;
+    width: $space--large * 3;
+    padding-bottom: $space--medium; 
+  }
+}

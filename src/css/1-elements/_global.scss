@@ -15,4 +15,18 @@ a {
 
 h1 {
   font-family: $font__primary;
+  font-weight: $font__weight;
+  margin-bottom: $space;
+
+  &.descriptive {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+  }
+}
+
+section {
+  &.info {
+    padding-bottom: $space--large * 3; 
+  }
 }

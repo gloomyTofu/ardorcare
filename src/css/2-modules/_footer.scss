@@ -1,0 +1,16 @@
+footer {
+  color: white;
+  background-color: $color__base;
+
+  table.info__content {
+    margin: $space--medium 0 $space--large * 2;
+
+    td {
+      padding-bottom: $space;
+    }
+
+    td a {
+      color: white;
+    }
+  }
+}

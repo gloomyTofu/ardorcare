@@ -1,3 +1,56 @@
 {
-  
+  "title": "Ardor Care Company",
+  "logo": "svg/ardor_care_logo.svg",
+  "tagline": "Home Care Services",
+  "team": [
+    "Our care team is bonded by our shared core values of caring with enthusiasm and passion.",
+    "Whether you’re a busy family that needs a caregiver periodically, on a regular basis, or if you’re in a bind and need reliable care at the drop of a dime, we can help."
+  ],
+  "about": [
+    "is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.",
+    "Focusing on the experiences of caregiving and making it our collective center. We are able to provide  personalized care that reflects each individuals and families requisite.",
+    "We are committed to being a socially responsible business, it is our duty to put back into our local communities, create quality opportunities, and be the neighbor of choice."
+  ],
+  "contact": {
+    "office": "425-278-9799",
+    "toll": "877-778-9995",
+    "fax": "425-272-4293",
+    "email": {
+      "user": "info",
+      "domain": "ardorcarecompany"
+    },
+    "address": [
+      "40 Lake Bellevue Dr Ste 100,",
+      "Bellevue, Wa 98005"
+    ]
+  },
+  "services": [{
+    "id": "childcare",
+    "title": "childcare",
+    "rates": [{
+      "header": "Sitter Services",
+      "keypoints": "in-home child care",
+      "description": "Customized in home child care to give personalized attention to the family’s children(s). Provides activity support, companionship, personal care, supervision and custodial care.",
+      "hourly": "$30.00"
+    }]
+  },{
+    "id": "seniorcare",
+    "title": "senior care",
+    "rates": [{
+      "header": "Home Care Services",
+      "keypoints": "non-medical caregiver",
+      "description": "Personalized care that reflects each individuals needs: Activity Support, Companionship, Condition Specific Care, Household Chores and Personal Care (ADLs and IADLs).",
+      "hourly": "$30.00"
+    },{
+      "header": "Nurse Delegated Home Care Services",
+      "keypoints": "RN certified caregiver",
+      "description": "Home Care Services, with inclusion of specifically trained caregivers under *RN guidance to perform: Medication Administration, Tube Feeding, Simple Wound Care, Blood Glucose Monitoring. *RN Independent Contractor in conjunction with Ardor Care Company.",
+      "hourly": "$33.00"
+    },{
+      "header": "24 Hours Live-In Home Care Services",
+      "keypoints": "RN certified caregiver",
+      "description": "Live-in Home Care Services are geared towards seniors and others who requires \"round the clock\" care. This type of care is more appropriate for individuals who have higher care needs.",
+      "daily": "$375.00"
+    }]
+  }]
 }

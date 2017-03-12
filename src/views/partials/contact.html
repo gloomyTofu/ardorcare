@@ -1,0 +1,48 @@
+<table class="info__content">
+  <tr>
+    <td>
+      O:
+    </td>
+    <td>
+      <a href="tel:{{ contact.office }}">{{ contact.office }}</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      T:
+    </td>
+    <td>
+      <a href="tel:{{ contact.toll }}">{{ contact.toll }}</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      F:
+    </td>
+    <td>
+      {{ contact.fax }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      E:
+    </td>
+    <td>
+      <a href="{{ contact.email.user }} [at] {{ contact.email.domain }}.com" rel="nofollow" onclick="this.href='mailto:' + '{{ contact.email.user }}' + '@' + '{{ contact.email.domain }}.com'">
+        {{ contact.email.user }}<span class="email"></span>{{ contact.email.domain }}.com
+      </a>
+    </td>
+  </tr>
+  <tr class="address">
+    <td>
+      A:
+    </td>
+    <td>
+      <address>
+        {% for address in contact.address %}
+          {{ address }}<br/>
+        {% endfor %}
+      </address>
+    </td>
+  </tr>
+</table>

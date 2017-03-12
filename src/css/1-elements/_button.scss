@@ -8,15 +8,16 @@ button, .button, input[type="button"], input[type="submit"] {
   min-width: auto;
   display: inline-block;
   box-sizing: content-box;
+  font-family: $font__primary;
   color: set-text-color($color__primary);
   background-color: $color__primary;
-  margin: $space--medium $space $space--medium 0;
+  margin: $space--medium 0;
   padding: 0 $space--medium;
   cursor: pointer;
   transition: color 0.25s $ease-in-out-sine, background-color 0.25s $ease-in-out-sine;
 
   &::last-child {
-    margin-right: 0;
+    margin-left: $space;
   }
 
   &:hover, &:focus {

@@ -7,6 +7,7 @@
 @import '1-elements/variables.scss';
 @import '1-elements/mixins.scss';
 @import '1-elements/functions.scss';
+@import '1-elements/grid.scss';
 @import '1-elements/typography.scss';
 @import '1-elements/color.scss';
 @import '1-elements/global.scss';
@@ -16,10 +17,13 @@
 
 // 2 - MODULES: Elements within Presentational Sass - Reusable Patterns
 @import '2-modules/form.scss';
-@import '2-modules/coming-soon.scss';
+@import '2-modules/header.scss';
+@import '2-modules/footer.scss';
+@import '2-modules/contact.scss';
+@import '2-modules/services.scss';
 
 // 3 - LAYOUTS: Applying specific classes to <body> to render different layouts
-
+@import '3-layouts/coming-soon.scss';
 
 // STYLEGUIDE
 @import '0-tools/styleguide.scss';
