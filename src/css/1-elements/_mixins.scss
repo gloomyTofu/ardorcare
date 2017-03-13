@@ -37,3 +37,15 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin mobile--only {
+  @media only screen and (max-width: $tablet__portrait) {
+    @content;
+  }
+}
+
+@mixin mobile__landscape {
+  @media only screen and (max-width: $tablet__portrait) and (orientation: landscape) {
+    @content;
+  }
+}

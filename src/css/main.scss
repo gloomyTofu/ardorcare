@@ -15,16 +15,23 @@
 @import '1-elements/list.scss';
 @import '1-elements/input.scss';
 @import '1-elements/button.scss';
+@import '1-elements/svg.scss';
 
 // 2 - MODULES: Elements within Presentational Sass - Reusable Patterns
 @import '2-modules/form.scss';
-@import '2-modules/header.scss';
-@import '2-modules/footer.scss';
+@import '2-modules/expand.scss';
 @import '2-modules/contact.scss';
-@import '2-modules/services.scss';
+
 
 // 3 - LAYOUTS: Applying specific classes to <body> to render different layouts
-@import '3-layouts/coming-soon.scss';
+@import '3-layouts/header.scss';
+@import '3-layouts/footer.scss';
+@import '3-layouts/services.scss';
+@import '3-layouts/modals.scss';
+
+
+// 4 - PAGE: Page specific styles
+@import '4-pages/coming-soon.scss';
 
 // STYLEGUIDE
 @import '0-tools/styleguide.scss';

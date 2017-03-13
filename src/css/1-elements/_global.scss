@@ -8,6 +8,14 @@ body {
   height: 100%;
 }
 
+main {
+  margin-top: $main__margin--mobile;
+
+  @include breakpoint(tablet__portrait) {
+    margin-top: $main__margin;
+  }
+}
+
 a {
   &:hover, &:focus {
     text-decoration: underline;
@@ -16,12 +24,12 @@ a {
 
 section {
   &.info {
-    padding-bottom: $space--large * 3;
+    padding-bottom: $space--large;
   }
 }
 
 .flex + section.info {
-  margin-top: $space--large * 3;
+  margin-top: $space--large;
 }
 
 @include breakpoint(tablet__portrait) {

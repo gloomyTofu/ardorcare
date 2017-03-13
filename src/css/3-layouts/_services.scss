@@ -44,12 +44,12 @@
     }
 
     &.flex__col--50 {
-      margin: 2% 2%;
+      margin: 2% 2% 2% 1%;
       flex: 0 1 46%;
     }
 
     &.flex__col--50:last-child {
-      margin: 2% 0.5%;
+      margin: 2% 0%;
     }
   }
 }
@@ -60,4 +60,20 @@
 
 #seniorcare {
   background-image: url(../img/services__seniorcare.jpg);
+}
+
+.flex {
+  @include mobile__landscape {
+    flex-direction: row;
+
+    .services.flex__col--50 {
+      height: 75vh;
+      margin: 2% 2% 2% 1%;
+      flex: 0 1 46%;
+    }
+
+    .services.flex__col--50:last-child {
+      margin: 2% 0%;
+    }
+  }
 }

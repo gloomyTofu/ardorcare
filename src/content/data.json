@@ -1,5 +1,6 @@
 {
-  "prod": true,
+  "prod": false,
+  "path": "",
   "title": "Ardor Care Company",
   "logo": "svg/ardor_care_logo.svg",
   "tagline": "Home Care Services",
@@ -42,17 +43,17 @@
     "short": "Personalized home care services",
     "rates": [{
       "header": "Home Care Services",
-      "keypoints": "non-medical caregiver",
+      "keypoints": "Non-medical caregiver",
       "description": "Personalized care that reflects each individuals needs: Activity Support, Companionship, Condition Specific Care, Household Chores and Personal Care (ADLs and IADLs).",
       "hourly": "$30.00"
     },{
       "header": "Nurse Delegated Home Care Services",
-      "keypoints": "RN certified caregiver",
+      "keypoints": "RN-certified caregiver",
       "description": "Home Care Services, with inclusion of specifically trained caregivers under *RN guidance to perform: Medication Administration, Tube Feeding, Simple Wound Care, Blood Glucose Monitoring. *RN Independent Contractor in conjunction with Ardor Care Company.",
       "hourly": "$33.00"
     },{
       "header": "24 Hours Live-In Home Care Services",
-      "keypoints": "RN certified caregiver",
+      "keypoints": "Continuous in-home caregiving",
       "description": "Live-in Home Care Services are geared towards seniors and others who requires \"round the clock\" care. This type of care is more appropriate for individuals who have higher care needs.",
       "daily": "$375.00"
     }]

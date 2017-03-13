@@ -29,14 +29,12 @@ section {
   @include for-IE-only {
     display: block;
   }
-
-  @include breakpoint(tablet__portrait) {
-    flex-direction: row;
-  }
 }
 
 @include breakpoint(tablet__portrait) {
   .flex {
+    flex-direction: row;
+
     &__col {
       padding: 0;
       margin: $gutter $gutter $gutter;

@@ -1,0 +1,13 @@
+svg {
+
+  &.icon__modal--close {
+    width: 30px;
+    height: 30px;
+
+    line {
+      fill: none;
+      stroke: $color__base;
+      stroke-miterlimit: 10;
+    }
+  }
+}

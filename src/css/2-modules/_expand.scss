@@ -1,0 +1,10 @@
+[aria-hidden=true] {
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  transition: height 0.12s ease-out;
+}
+
+[aria-hidden=false] {
+  visibility: visible;
+}

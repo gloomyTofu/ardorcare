@@ -1,0 +1,40 @@
+  <div id="modal" class="modal">
+    <div class="flex content">
+      <div id="modal--close">
+        {% include "svg/modal--close.html" %}
+      </div>
+
+        {% for service in services  %}
+        <div id="modal--{{ service.id }}" class="modal-service">
+          <div class="h1">{{ service.title }}</div>
+
+          {% for rate in service.rates  %}
+          <div class="services--rate">
+
+            <div class="flex">
+              <div class="flex__col modal__service">
+                {{ rate.header }}
+              </div>
+              <div class="flex__col modal__rate">
+                {% if rate.hourly %}
+                  {{ rate.hourly }}/Hourly
+                {% endif %}
+
+                {% if rate.daily %}
+                  {{ rate.daily }}/Daily
+                {% endif %}
+              </div>
+            </div>
+            <p class="modal__keypoints">
+              <span class="read-more"></span> {{ rate.keypoints }}
+            </p>
+            <p class="modal__description" aria-hidden="true">
+              {{ rate.description }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>

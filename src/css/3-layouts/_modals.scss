@@ -1,0 +1,125 @@
+body {
+  &.modal--open {
+    overflow: hidden;
+  }
+}
+
+.modal {
+  position: fixed;
+  //top: $main__margin--mobile;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(white, 0.98);
+  visibility: hidden;
+  pointer-events: none;
+
+  &.open {
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .modal-service {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  @include mobile--only {
+    .modal-service.active {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 100px;
+    }
+  }
+
+  .services--rate {
+    margin-bottom: $space--medium;
+  }
+
+  &__service {
+    margin: 0;
+    color: $color__primary;
+    text-transform: uppercase;
+    font-family: $font__primary;
+    font-weight: $font__weight;
+    flex: 1 0 75%;
+  }
+
+  &__rate {
+    margin: 0;
+    font-family: $font__primary;
+    font-weight: $font__weight;
+    flex: 1 0 25%;
+  }
+
+  &__keypoints {
+    cursor: pointer;
+    color: rgba($color__base, 0.75);
+
+    span.read-more::before {
+      content: '+';
+    }
+
+    &.active span.read-more::before {
+      content: '-';
+    }
+  }
+
+  &__description {
+
+  }
+
+  .h1 {
+    text-align: center;
+    padding-bottom: $space--large;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: $space;
+  }
+
+  .flex {
+    padding: 0;
+
+    &.content {
+      padding: $padding * 2 $padding;
+    }
+
+    &__col {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(tablet__portrait) {
+    top: $main__margin + 2;
+
+    .h1 {
+      padding-bottom: $space--large * 2;
+    }
+
+    .flex.content {
+      padding: $padding;
+      margin: 10vh auto 0;
+      max-width: 75%;
+    }
+  }
+
+  @include breakpoint(tablet__landscape) {
+
+    .flex.content {
+      max-width: 50%;
+    }
+  }
+}
+
+#modal--close {
+  cursor: pointer;
+  font-family: $font__primary;
+  text-align: right;
+}
