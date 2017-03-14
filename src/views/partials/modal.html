@@ -25,10 +25,10 @@
                 {% endif %}
               </div>
             </div>
-            <p class="modal__keypoints">
+            <p class="modal__keypoints {% if loop.index0 === 0 %}active{% endif %}">
               <span class="read-more"></span> {{ rate.keypoints }}
             </p>
-            <p class="modal__description" aria-hidden="true">
+            <p class="modal__description" aria-hidden="{% if loop.index0 === 0 %}false{% else %}true{% endif %}">
               {{ rate.description }}
             </p>
           </div>

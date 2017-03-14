@@ -1,0 +1,14 @@
+<svg id="icon__modal--close" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ccc;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>modal--close</title>
+  <line class="cls-1" x1="1.04" y1="1.07" x2="48.96" y2="48.93"/>
+  <line class="cls-1" x1="48.96" y1="1.07" x2="1.04" y2="48.93"/>
+</svg>

@@ -1,24 +1,34 @@
 body {
   &.modal--open {
-    overflow: hidden;
+    //overflow: hidden;
+    .header {
+      position: relative;
+    }
+
+    main {
+      display: none;
+    }
+  }
+
+  main {
+    display: block;
   }
 }
 
 .modal {
-  position: fixed;
-  //top: $main__margin--mobile;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 1001;
   width: 100%;
   min-height: 100vh;
   background-color: rgba(white, 0.98);
   visibility: hidden;
   pointer-events: none;
+  display: none;
 
   &.open {
     pointer-events: auto;
     visibility: visible;
+    display: block; 
   }
 
   .modal-service {
@@ -30,15 +40,15 @@ body {
   }
 
   @include mobile--only {
-    .modal-service.active {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 100px;
-    }
+    // .modal-service.active {
+    //   overflow-y: scroll;
+    //   -webkit-overflow-scrolling: touch;
+    //   padding-bottom: 200px;
+    // }
   }
 
   .services--rate {
-    margin-bottom: $space--medium;
+    margin-bottom: $space--large;
   }
 
   &__service {
@@ -97,14 +107,18 @@ body {
   }
 
   @include breakpoint(tablet__portrait) {
-    top: $main__margin + 2;
+    //margin-top: $main__margin + 10;
 
     .h1 {
       padding-bottom: $space--large * 2;
     }
 
+    .services--rate {
+      margin-bottom: $space--large * 2;
+    }
+
     .flex.content {
-      padding: $padding;
+      padding: $padding * 3 $padding;
       margin: 10vh auto 0;
       max-width: 75%;
     }
@@ -122,4 +136,5 @@ body {
   cursor: pointer;
   font-family: $font__primary;
   text-align: right;
+  margin-bottom: $space;
 }

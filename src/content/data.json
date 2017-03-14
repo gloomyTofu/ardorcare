@@ -1,5 +1,5 @@
 {
-  "prod": false,
+  "prod": true,
   "path": "",
   "title": "Ardor Care Company",
   "logo": "svg/ardor_care_logo.svg",
@@ -30,7 +30,7 @@
   "services": [{
     "id": "childcare",
     "title": "childcare",
-    "short": "Customized in home child care",
+    "short": "Customized home child care",
     "rates": [{
       "header": "Sitter Services",
       "keypoints": "in-home child care",
