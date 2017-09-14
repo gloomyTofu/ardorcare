@@ -1,0 +1,89 @@
+.tab {
+  .services--rate {
+    margin-bottom: $space--large;
+  }
+
+  &__service {
+    margin: 0;
+    color: $color__primary;
+    text-transform: uppercase;
+    font-family: $font__primary;
+    font-weight: $font__weight;
+    flex: 1 0 75%;
+  }
+
+  &__rate {
+    margin: 0;
+    font-family: $font__primary;
+    font-weight: $font__weight;
+    flex: 1 0 25%;
+  }
+
+  &__keypoints {
+    cursor: pointer;
+    color: rgba($color__base, 0.75);
+
+    span.read-more {
+      pointer-events: none;
+    }
+
+    span.read-more::before {
+      content: '+';
+    }
+
+    &.active span.read-more::before {
+      content: '-';
+    }
+  }
+
+  &__description {
+
+  }
+
+  .h1 {
+    text-align: center;
+    padding-bottom: $space--large;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: $space;
+  }
+
+  .flex {
+    padding: 0;
+
+    &.content {
+      padding: $padding * 2 $padding;
+    }
+
+    &__col {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(tablet__portrait) {
+    //margin-top: $main__margin + 10;
+
+    .h1 {
+      padding-bottom: $space--large * 2;
+    }
+
+    .services--rate {
+      margin-bottom: $space--large * 2;
+    }
+
+    .flex.content {
+      padding: $padding * 3 $padding;
+      margin: 10vh auto 0;
+      max-width: 75%;
+    }
+  }
+
+  @include breakpoint(tablet__landscape) {
+
+    .flex.content {
+      max-width: 50%;
+    }
+  }
+}

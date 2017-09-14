@@ -1,0 +1,58 @@
+{% extends "page.html" %}
+
+{% block header %}
+  {{ services[0].pageHeader | title }}
+{% endblock %}
+
+{% block body %}
+<div class="flex service">
+  <div class="flex__col">
+    <ul class="tabs__navigation">
+      <li id="tab--info">
+        {{ services[0].infoHeader }}
+      </li>
+      <li id="tab--services">
+        {{services[0].ratesHeader }}
+      </li>
+    </ul>
+
+    <div class="tabs">
+      <div class="tabs__content tab tab__content--info">
+        {% for info in services[0].info  %}
+          <p>
+            {{ info }}
+          </p>
+        {% endfor %}
+      </div>
+      <div class="tabs__content tab tab__content--services">
+        <div class="tab-service">
+          {% for rate in services[0].rates  %}
+          <div class="services--rate">
+            <div class="flex">
+              <div class="flex__col tab__service">
+                {{ rate.header }}
+              </div>
+              <div class="flex__col tab__rate">
+                {% if rate.hourly %}
+                  {{ rate.hourly }}/Hourly
+                {% endif %}
+
+                {% if rate.daily %}
+                  {{ rate.daily }}/Daily
+                {% endif %}
+              </div>
+            </div>
+            <p class="tab__keypoints {% if loop.index0 === 0 %}active{% endif %}">
+              <span class="read-more"></span> {{ rate.keypoints }}
+            </p>
+            <p class="tab__description" aria-hidden="{% if loop.index0 === 0 %}false{% else %}true{% endif %}">
+              {{ rate.description }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

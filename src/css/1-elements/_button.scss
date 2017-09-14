@@ -33,6 +33,12 @@ button, .button, input[type="button"], input[type="submit"] {
 }
 
 .button {
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: none; 
+  }
+
   &--secondary {
     color: set-text-color($color__secondary);
     background-color: $color__secondary;

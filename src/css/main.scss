@@ -15,13 +15,14 @@
 @import '1-elements/list.scss';
 @import '1-elements/input.scss';
 @import '1-elements/button.scss';
+@import '1-elements/links.scss';
 @import '1-elements/svg.scss';
 
 // 2 - MODULES: Elements within Presentational Sass - Reusable Patterns
 @import '2-modules/form.scss';
 @import '2-modules/expand.scss';
 @import '2-modules/contact.scss';
-
+@import '2-modules/tabs.scss';
 
 // 3 - LAYOUTS: Applying specific classes to <body> to render different layouts
 @import '3-layouts/header.scss';

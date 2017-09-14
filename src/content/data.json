@@ -1,6 +1,6 @@
 {
-  "prod": true,
-  "path": "",
+  "prod": false,
+  "path": "/",
   "title": "Ardor Care Company",
   "logo": "svg/ardor_care_logo.svg",
   "tagline": "Home Care Services",
@@ -24,38 +24,73 @@
     },
     "address": [
       "40 Lake Bellevue Dr Ste 100,",
-      "Bellevue, Wa 98005"
+      "Bellevue, WA 98005"
     ]
   },
-  "services": [{
-    "id": "childcare",
-    "title": "childcare",
-    "short": "Customized home child care",
-    "rates": [{
-      "header": "Sitter Services",
-      "keypoints": "in-home child care",
-      "description": "Customized in home child care to give personalized attention to the family’s children(s). Provides activity support, companionship, personal care, supervision and custodial care.",
-      "hourly": "$30.00"
-    }]
-  },{
-    "id": "seniorcare",
-    "title": "senior care",
-    "short": "Personalized home care services",
-    "rates": [{
-      "header": "Home Care Services",
-      "keypoints": "Non-medical caregiver",
-      "description": "Personalized care that reflects each individuals needs: Activity Support, Companionship, Condition Specific Care, Household Chores and Personal Care (ADLs and IADLs).",
-      "hourly": "$30.00"
-    },{
-      "header": "Nurse Delegated Home Care Services",
-      "keypoints": "RN-certified caregiver",
-      "description": "Home Care Services, with inclusion of specifically trained caregivers under *RN guidance to perform: Medication Administration, Tube Feeding, Simple Wound Care, Blood Glucose Monitoring. *RN Independent Contractor in conjunction with Ardor Care Company.",
-      "hourly": "$33.00"
-    },{
-      "header": "24 Hours Live-In Home Care Services",
-      "keypoints": "Continuous in-home caregiving",
-      "description": "Live-in Home Care Services are geared towards seniors and others who requires \"round the clock\" care. This type of care is more appropriate for individuals who have higher care needs.",
-      "daily": "$375.00"
-    }]
-  }]
+  "services": [
+    {
+      "id": "seniorcare",
+      "title": "senior care",
+      "short": "Personalized home care services",
+      "button": "Our Services",
+      "pageHeader": "In-Home Senior and Companion Care",
+      "infoHeader": "Information",
+      "info": [
+        "Ardor Care Company offers assistance to families through a wide range of companion care services at home, in a hospital or healthcare facility.",
+        "We offers individualized plans of care to help you or your loved one stay active and independent in the comforts of your own home.",
+        "Our care team can assist with anything from light housekeeping, personal care, and activities support. ",
+        "We provide hourly, daily or overnight care designed to maximize independence, lessen isolation and loneliness. This helps to avoid unnecessary medical visits, and provide peace of mind to seniors and their families."
+      ],
+      "ratesHeader": "Our Services",
+      "rates": [{
+        "header": "Home Care Services",
+        "keypoints": "Non-medical caregiver",
+        "description": "Personalized care that reflects each individuals needs: Activity Support, Companionship, Condition Specific Care, Household Chores and Personal Care (ADLs and IADLs).",
+        "descriptions": [
+          {
+            "header": "Personal Care",
+            "copy": "Ardor Care Company provides individualized personal care services to help with activities of daily living. We are giving families peace-of-mind and preserving clients dignity and comfort everyday.  Our caregivers assist your family member in completing their individual daily tasks."
+          },
+          {
+            "header": "Companion Care",
+            "copy": "Our companion care program focuses on the social needs of our senior care recipients.  Companion care goes beyond caregiving and provide a social connection that many seniors lack, sharing with them the types of simple social activities that enrich all our daily lives."
+          },
+          {
+            "header": "Long Term Home Care",
+            "copy": "Our long term care services focuses on a range of supporting home care services that assist the care recipient in their routine.  Our caregivers work with care recipients in their homes, in assisted living centers and in nursing facilities.  Our goal is to improve the quality of life for our care recipients, by providing supportive care and companionship in a variety of ways.  We are passionate about providing enthusiastic care for our care recipients, it is the most important thing we do."
+          },
+          {
+            "header": "Respite Care",
+            "copy": "Ardor Care Company respite care program is designed to give relief to family members who are primary caregivers for their loved ones.  Our respite care program can provide seamless and worry-free coverage that helps take care of the individual needs of both the care recipients and caregiver.  Our respite caregivers provides the reassurance you need that your loved ones is in good hands."
+          }
+        ],
+        "hourly": "$30.00"
+      },{
+        "header": "Nurse Delegated Home Care Services",
+        "keypoints": "RN-certified caregiver",
+        "description": "Home Care Services, with inclusion of specifically trained caregivers under *RN guidance to perform: Medication Administration, Tube Feeding, Simple Wound Care, Blood Glucose Monitoring. *RN Independent Contractor in conjunction with Ardor Care Company.",
+        "hourly": "$33.00"
+      },{
+        "header": "24 Hours Live-In Home Care Services",
+        "keypoints": "Continuous in-home caregiving",
+        "description": "Live-in Home Care Services are geared towards seniors and others who requires \"round the clock\" care. This type of care is more appropriate for individuals who have higher care needs.",
+        "daily": "$375.00"
+      }]
+    },
+    {
+      "id": "childcare",
+      "title": "childcare",
+      "short": "Customized home child care",
+      "button": "Our Services",
+      "info": [
+
+      ],
+      "rates": [{
+        "header": "Sitter Services",
+        "keypoints": "in-home child care",
+        "description": "Customized in home child care to give personalized attention to the family’s children(s). Provides activity support, companionship, personal care, supervision and custodial care.",
+        "hourly": "$30.00"
+      }]
+    }
+  ]
 }

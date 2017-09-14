@@ -5,83 +5,9 @@
 {% endblock %}
 
     {% block body %}
-      <h1 class='descriptive'>{{ title }}</h1>
-      <main>
-      <div class="flex">
-        {% for service in services %}
-        <section id="{{ service.id }}" class="services flex__col flex__col--50">
-          <div class="flex content">
-            <h1>{{ service.title }}</h1>
-            <p>
-              {{ service.short }}
-            </p>
-            <button id="rate--{{ loop.index }}" class="rates">
-              Our Rates
-            </button>
-          </div>
-        </section>
-        {% endfor %}
+      <div id="content__container">
+
       </div>
-
-        <section class="info">
-          <h1 class="descriptive">
-            About
-          </h1>
-          <div class="flex">
-            <div class="flex__col flex__col--33 flex__col-left--2">
-              <h2 class="h1 header--line">
-                <span class="block">Ardor</span>
-                <span class="block highlight">Care</span>
-                <span class="block">Company</span>
-              </h2>
-            </div>
-
-            <div class="flex__col flex__col--50">
-              {% for about in about %}
-              <p>
-                {{ about }}
-              </p>
-              {% endfor %}
-            </div>
-          </div>
-        </section>
-
-        <section class="info">
-          <div class="flex">
-            <div class="flex__col flex__col--33 flex__col-left--2">
-              <h1 class="header--line">
-                Our Team
-              </h1>
-            </div>
-
-            <div class="flex__col flex__col--50">
-              {% for team in team %}
-              <p>
-                {{ team }}
-              </p>
-              {% endfor %}
-            </div>
-          </div>
-        </section>
-
-        <section class="info">
-          <div class="flex">
-            <div class="flex__col flex__col--33 flex__col-left--2">
-              <h1 class="header--line">
-                Our Commitment
-              </h1>
-            </div>
-
-            <div class="flex__col flex__col--50">
-              <p>
-                {{ commitment }}
-              </p>
-            </div>
-          </div>
-        </section>
-
-      </main>
-      {% include "partials/modal.html" %}
 
       {% include "partials/footer.html" %}
 

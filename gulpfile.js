@@ -10,18 +10,22 @@ const gulp = require('gulp'),
   imageMin = require('gulp-imagemin'),
   strip = require('gulp-strip-comments'),
   nunjucksRender = require('gulp-nunjucks-render'),
-	data = require('gulp-data'),
+	data = require('gulp-data')
   paths = {
-  	neither:['src/*.html', 'src/**/*.html'],
+  	neither:['src/*.html', 'src/pages/*.html'],
   	styles:['src/css/**/*.scss', 'src/css/*.scss'],
   	styleSheet:['src/css/main.scss'],
-  	scripts:['src/js/*.js','src/js/components/*.js', 'src/vendor/classList.min.js', 'src/vendor/anime.js'],
+  	scripts:['src/js/vendor/anime.js', 'node_modules/vanilla-router/dist/vanilla-router.min.js', 'src/js/*.js','src/js/components/*.js'],
   	images:['src/img/*.jpg', 'src/img/**/*'],
   	svgs:['src/**/*.svg'],
     info:['src/*.png', 'src/*.xml', 'src/*.ico', 'src/*.txt']
   },
   vendor = {
-  	js: ['src/js/vendor/modernizr.js', 'src/js/vendor/picturefill.min.js']
+  	js: [
+      'src/js/vendor/modernizr-custom.js',
+      'src/js/vendor/picturefill.min.js',
+      'src/js/vendor/classList.min.js'
+    ]
   };
 
 var flags = require('yargs').argv;
@@ -45,7 +49,7 @@ gulp.task('build:styles',function(){
   .pipe(sourcemaps.write());
 	if(flags.prod){
 		task = task.pipe(cleanCSS())
-		.pipe(concat('main.min.css'));
+		.pipe(concat('main.css'));
 	}
 	task = task.pipe(gulp.dest(dest))
 	.pipe(connect.reload());
@@ -54,7 +58,7 @@ gulp.task('build:styles',function(){
 
 gulp.task('build:scripts',function(){
 	var dest = flags.prod?'dist/js':'build/js';
-	var name = flags.prod?'main.min.js':'main.js';
+	var name = flags.prod?'main.js':'main.js';
 	var task = gulp.src(paths.scripts)
 	.pipe(concat(name, {newline:''}));
 	if(flags.prod){
@@ -67,9 +71,9 @@ gulp.task('build:scripts',function(){
 });
 
 gulp.task('build:scripts:vendor',function(){
-	del.sync(['build/js/vendor/vendor.min.js']);
+	del.sync(['build/js/vendor/vendor.js']);
 	var dest = flags.prod?'dist/js/vendor':'build/js/vendor';
-	var name = flags.prod?'vendor.min.js':'vendor.js';
+	var name = flags.prod?'vendor.js':'vendor.js';
 	var task = gulp.src(vendor.js)
 	.pipe(concat(name, {newline:''}));
 	if(flags.prod){
@@ -89,8 +93,8 @@ gulp.task('build:svg',function(){
 });
 
 gulp.task('build:nunjucks',function(){
-	var dest = flags.prod?'dist':'build';
-	var task = gulp.src(paths.neither[0])
+	var dest = flags.prod ? 'dist/':'build/';
+	var task = gulp.src(paths.neither)
 	.pipe(data(function() {return require('./src/content/data.json')}))
 	.pipe(nunjucksRender({path: ['src/views/']}))
 	.pipe(gulp.dest(dest))

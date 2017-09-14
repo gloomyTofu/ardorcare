@@ -47,17 +47,17 @@ var rates = {
   }
 }
 
-var childcare = rates.getElementId('rate--1');
-rates.eventHandler(childcare, 'click', function() {
-  var modal = rates.getElementId('modal--childcare');
-  rates.openModal(modal, 'modal', 'active');
-});
-
-var seniorcare = rates.getElementId('rate--2');
-rates.eventHandler(seniorcare, 'click', function() {
-  var modal = rates.getElementId('modal--seniorcare');
-  rates.openModal(modal, 'modal', 'active');
-});
+// var childcare = rates.getElementId('rate--1');
+// rates.eventHandler(childcare, 'click', function() {
+//   var modal = rates.getElementId('modal--childcare');
+//   rates.openModal(modal, 'modal', 'active');
+// });
+//
+// var seniorcare = rates.getElementId('rate--2');
+// rates.eventHandler(seniorcare, 'click', function() {
+//   var modal = rates.getElementId('modal--seniorcare');
+//   rates.openModal(modal, 'modal', 'active');
+// });
 
 var keypoints = rates.getElementClassName('modal__keypoints');
 for (var i = 0; i < keypoints.length; i++) {
@@ -69,10 +69,10 @@ for (var i = 0; i < keypoints.length; i++) {
       event.target.classList.remove('active');
       event.target.nextElementSibling.setAttribute('aria-hidden', true);
     }
-  });
+  }, false);
 }
 
-rates.eventHandler(rates.modalClose, 'click', function() {
-  rates.removeClasses('modal-service', 'active');
-  rates.closeModal();
-});
+// rates.eventHandler(rates.modalClose, 'click', function() {
+//   rates.removeClasses('modal-service', 'active');
+//   rates.closeModal();
+// });
