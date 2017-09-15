@@ -1,3 +1,29 @@
+.tabs {
+  &__navigation {
+    display: flex;
+    justify-content: center;
+
+    li {
+      color: darken($color__base--border, 20%);
+      border: 1px solid $color__base--highlight;
+      background-color: $color__base--highlight;
+      width: 200px;
+      padding: $space;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-family: $font__primary;
+      margin-bottom: $space--large;
+    }
+
+    li.active, li:hover, li:focus {
+      color: $color__primary;
+      background-color: white;
+      transition: background-color 0.12s $ease-in-out-sine, color 0.12s $ease-in-out-sine;
+    }
+  }
+}
+
 .tab {
   .services--rate {
     margin-bottom: $space--large;
@@ -16,7 +42,7 @@
     margin: 0;
     font-family: $font__primary;
     font-weight: $font__weight;
-    flex: 1 0 25%;
+    flex: 1 0 10%;
   }
 
   &__keypoints {

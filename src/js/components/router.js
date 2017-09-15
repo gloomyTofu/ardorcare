@@ -28,6 +28,10 @@ router
   .add('seniorcare', function() {
     console.log('senior care page');
     getRoute('seniorcare.html');
+
+    setTimeout(function() {
+      getEventListener();
+    }, 250);
   })
 
   .add('childcare', function() {

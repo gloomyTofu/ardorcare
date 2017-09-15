@@ -7,6 +7,8 @@
 {% block body %}
 <div class="flex service">
   <div class="flex__col">
+    <h2 class="center">{{ services[0].pageHeader | title }}</h2>
+
     <ul class="tabs__navigation">
       <li id="tab--info">
         {{ services[0].infoHeader }}
@@ -17,14 +19,14 @@
     </ul>
 
     <div class="tabs">
-      <div class="tabs__content tab tab__content--info">
+      <div class="tabs__content tab" id="tab__content--info">
         {% for info in services[0].info  %}
           <p>
             {{ info }}
           </p>
         {% endfor %}
       </div>
-      <div class="tabs__content tab tab__content--services">
+      <div class="tabs__content tab" id="tab__content--services">
         <div class="tab-service">
           {% for rate in services[0].rates  %}
           <div class="services--rate">

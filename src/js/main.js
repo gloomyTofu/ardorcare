@@ -47,6 +47,38 @@ var rates = {
   }
 }
 
+function getEventListener() {
+  var tabInfo = rates.getElementId('tab--info');
+  var tabServices = rates.getElementId('tab--services');
+  tabInfo.classList.add('active');
+
+  rates.eventHandler(tabInfo, 'click', function(event) {
+    rates.toggleClass(tabInfo, 'active');
+    rates.toggleClass(tabServices, 'active');
+  });
+
+  rates.eventHandler(tabServices, 'click', function(event) {
+    rates.toggleClass(tabInfo, 'active');
+    rates.toggleClass(tabServices, 'active');
+  });
+
+  var keypoints = rates.getElementClassName('tab__keypoints');
+  for (var i = 0; i < keypoints.length; i++) {
+    console.log(i);
+    var keypoint = keypoints[i];
+    console.log(keypoint);
+    rates.eventHandler(keypoint, 'click', function(event) {
+      console.log(event);
+      if (!event.target.classList.contains('active')) {
+        rates.accordion(event.target, 'tab__keypoints', 'active', 'tab__description');
+      } else {
+        event.target.classList.remove('active');
+        event.target.nextElementSibling.setAttribute('aria-hidden', true);
+      }
+    }, false);
+  }
+}
+
 // var childcare = rates.getElementId('rate--1');
 // rates.eventHandler(childcare, 'click', function() {
 //   var modal = rates.getElementId('modal--childcare');
@@ -58,19 +90,6 @@ var rates = {
 //   var modal = rates.getElementId('modal--seniorcare');
 //   rates.openModal(modal, 'modal', 'active');
 // });
-
-var keypoints = rates.getElementClassName('modal__keypoints');
-for (var i = 0; i < keypoints.length; i++) {
-  var keypoint = keypoints[i];
-  rates.eventHandler(keypoint, 'click', function(event) {
-    if (!event.target.classList.contains('active')) {
-      rates.accordion(event.target, 'modal__keypoints', 'active', 'modal__description');
-    } else {
-      event.target.classList.remove('active');
-      event.target.nextElementSibling.setAttribute('aria-hidden', true);
-    }
-  }, false);
-}
 
 // rates.eventHandler(rates.modalClose, 'click', function() {
 //   rates.removeClasses('modal-service', 'active');
