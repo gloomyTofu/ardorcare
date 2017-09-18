@@ -12,10 +12,8 @@
         <link rel="shortcut icon" href="ardorcare-favicon.ico" type="image/x-icon">
         <link rel='stylesheet' type='text/css'href='https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,500'>
 
-        
-        <link rel='stylesheet' href='css/main.min.css'>
-        <script src='js/vendor/vendor.min.js'></script>
-        
+        <link rel='stylesheet' href='css/main.css'>
+        <script src='js/vendor/vendor.js'></script>
 
     </head>
     <body>
@@ -25,229 +23,30 @@
       <![endif]-->
 
       <header class="header">
-  <a href="" class="flex flex__mobile">
-    <img class="header__logo" src="svg/ardor_care_logo.svg" alt="Ardor Care Company Logo"/>
-    <h1>Ardor <span>Care Company</span></h1>
-  </a>
+  <div class="flex flex__mobile">
+
+    <div class="flex__child logo">
+      <a href="/" class="flex flex__mobile">
+        <img class="header__logo" src="svg/ardor_care_logo.svg" alt="Ardor Care Company Logo"/>
+        <h1>Ardor <span>Care Company</span></h1>
+      </a>
+    </div>
+
+    <div class="flex__child button__container">
+      <a href="https://ardorcarecompany.clearcareonline.com/apply/" target="_blank" class="button">
+        Employment
+      </a>
+    </div>
+
+  </div>
+
 </header>
 
 
       
-      <h1 class='descriptive'>Ardor Care Company</h1>
-      <main>
-      <div class="flex">
-        
-        <section id="childcare" class="services flex__col flex__col--50">
-          <div class="flex content">
-            <h1>childcare</h1>
-            <p>
-              Customized home child care
-            </p>
-            <button id="rate--1" class="rates">
-              Our Rates
-            </button>
-          </div>
-        </section>
-        
-        <section id="seniorcare" class="services flex__col flex__col--50">
-          <div class="flex content">
-            <h1>senior care</h1>
-            <p>
-              Personalized home care services
-            </p>
-            <button id="rate--2" class="rates">
-              Our Rates
-            </button>
-          </div>
-        </section>
-        
-      </div>
-
-        <section class="info">
-          <h1 class="descriptive">
-            About
-          </h1>
-          <div class="flex">
-            <div class="flex__col flex__col--33 flex__col-left--2">
-              <h2 class="h1 header--line">
-                <span class="block">Ardor</span>
-                <span class="block highlight">Care</span>
-                <span class="block">Company</span>
-              </h2>
-            </div>
-
-            <div class="flex__col flex__col--50">
-              
-              <p>
-                Ardor Care Company is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.
-              </p>
-              
-              <p>
-                Focusing on the experiences of caregiving and making it our collective center. We are able to provide  personalized care that reflects each individuals and families requisite.
-              </p>
-              
-              <p>
-                We are committed to being a socially responsible business, it is our duty to put back into our local communities, create quality opportunities, and be the neighbor of choice.
-              </p>
-              
-            </div>
-          </div>
-        </section>
-
-        <section class="info">
-          <div class="flex">
-            <div class="flex__col flex__col--33 flex__col-left--2">
-              <h1 class="header--line">
-                Our Team
-              </h1>
-            </div>
-
-            <div class="flex__col flex__col--50">
-              
-              <p>
-                Our care team is bonded by our shared core values of caring with enthusiasm and passion.
-              </p>
-              
-              <p>
-                Whether you’re a busy family that needs a caregiver periodically, on a regular basis, or if you’re in a bind and need reliable care at the drop of a dime, we can help.
-              </p>
-              
-            </div>
-          </div>
-        </section>
-
-        <section class="info">
-          <div class="flex">
-            <div class="flex__col flex__col--33 flex__col-left--2">
-              <h1 class="header--line">
-                Our Commitment
-              </h1>
-            </div>
-
-            <div class="flex__col flex__col--50">
-              <p>
-                We were founded based on the principle of improving the quality of caregiving for both care recipients and caregivers. It is important for us to be transparent to allow care recipients and families the best options possible for their home care service needs.
-              </p>
-            </div>
-          </div>
-        </section>
-
-      </main>
-        <div id="modal" class="modal">
-    <div class="flex content">
-      <div id="modal--close">
-        <svg class="icon__modal--close" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <line x1="1.04" y1="1.07" x2="48.96" y2="48.93"/>
-  <line x1="48.96" y1="1.07" x2="1.04" y2="48.93"/>
-</svg>
+      <div id="content__container">
 
       </div>
-
-        
-        <div id="modal--childcare" class="modal-service">
-          <div class="h1">childcare</div>
-
-          
-          <div class="services--rate">
-
-            <div class="flex">
-              <div class="flex__col modal__service">
-                Sitter Services
-              </div>
-              <div class="flex__col modal__rate">
-                
-                  $30.00/Hourly
-                
-
-                
-              </div>
-            </div>
-            <p class="modal__keypoints active">
-              <span class="read-more"></span> in-home child care
-            </p>
-            <p class="modal__description" aria-hidden="false">
-              Customized in home child care to give personalized attention to the family’s children(s). Provides activity support, companionship, personal care, supervision and custodial care.
-            </p>
-          </div>
-          
-        </div>
-      
-        <div id="modal--seniorcare" class="modal-service">
-          <div class="h1">senior care</div>
-
-          
-          <div class="services--rate">
-
-            <div class="flex">
-              <div class="flex__col modal__service">
-                Home Care Services
-              </div>
-              <div class="flex__col modal__rate">
-                
-                  $30.00/Hourly
-                
-
-                
-              </div>
-            </div>
-            <p class="modal__keypoints active">
-              <span class="read-more"></span> Non-medical caregiver
-            </p>
-            <p class="modal__description" aria-hidden="false">
-              Personalized care that reflects each individuals needs: Activity Support, Companionship, Condition Specific Care, Household Chores and Personal Care (ADLs and IADLs).
-            </p>
-          </div>
-          
-          <div class="services--rate">
-
-            <div class="flex">
-              <div class="flex__col modal__service">
-                Nurse Delegated Home Care Services
-              </div>
-              <div class="flex__col modal__rate">
-                
-                  $33.00/Hourly
-                
-
-                
-              </div>
-            </div>
-            <p class="modal__keypoints ">
-              <span class="read-more"></span> RN-certified caregiver
-            </p>
-            <p class="modal__description" aria-hidden="true">
-              Home Care Services, with inclusion of specifically trained caregivers under *RN guidance to perform: Medication Administration, Tube Feeding, Simple Wound Care, Blood Glucose Monitoring. *RN Independent Contractor in conjunction with Ardor Care Company.
-            </p>
-          </div>
-          
-          <div class="services--rate">
-
-            <div class="flex">
-              <div class="flex__col modal__service">
-                24 Hours Live-In Home Care Services
-              </div>
-              <div class="flex__col modal__rate">
-                
-
-                
-                  $375.00/Daily
-                
-              </div>
-            </div>
-            <p class="modal__keypoints ">
-              <span class="read-more"></span> Continuous in-home caregiving
-            </p>
-            <p class="modal__description" aria-hidden="true">
-              Live-in Home Care Services are geared towards seniors and others who requires &quot;round the clock&quot; care. This type of care is more appropriate for individuals who have higher care needs.
-            </p>
-          </div>
-          
-        </div>
-      
-
-    </div>
-  </div>
-
 
       <footer>
   <div class="flex">
@@ -256,7 +55,7 @@
         Contact us
       </h1>
     </div>
-    <div class="flex__col flex__col--50">
+    <div class="flex__col flex__col--33">
       <table class="info__content">
   <tr>
     <td>
@@ -301,7 +100,7 @@
         
           40 Lake Bellevue Dr Ste 100,<br/>
         
-          Bellevue, Wa 98005<br/>
+          Bellevue, WA 98005<br/>
         
       </address>
     </td>
@@ -309,15 +108,36 @@
 </table>
 
     </div>
+    <div class="flex__col flex__col--18">
+      <ul class="social__icons">
+        
+          <li>
+            <a href="https://www.facebook.com/ardorcarecompany/" target="_blank" name="facebook">
+              facebook
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://twitter.com/ardorcareco" target="_blank" name="twitter">
+              twitter
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://www.instagram.com/ardorcarecompany/" target="_blank" name="instagram">
+              instagram
+            </a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
 </footer>
 
 
     
 
-      
-      <script src='js/main.min.js'></script>
-      
+      <script src='js/main.js'></script>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>

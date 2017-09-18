@@ -12,10 +12,8 @@
         <link rel="shortcut icon" href="ardorcare-favicon.ico" type="image/x-icon">
         <link rel='stylesheet' type='text/css'href='https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,500'>
 
-        
-        <link rel='stylesheet' href='css/main.min.css'>
-        <script src='js/vendor/vendor.min.js'></script>
-        
+        <link rel='stylesheet' href='css/main.css'>
+        <script src='js/vendor/vendor.js'></script>
 
     </head>
     <body>
@@ -25,10 +23,23 @@
       <![endif]-->
 
       <header class="header">
-  <a href="" class="flex flex__mobile">
-    <img class="header__logo" src="svg/ardor_care_logo.svg" alt="Ardor Care Company Logo"/>
-    <h1>Ardor <span>Care Company</span></h1>
-  </a>
+  <div class="flex flex__mobile">
+
+    <div class="flex__child logo">
+      <a href="/" class="flex flex__mobile">
+        <img class="header__logo" src="svg/ardor_care_logo.svg" alt="Ardor Care Company Logo"/>
+        <h1>Ardor <span>Care Company</span></h1>
+      </a>
+    </div>
+
+    <div class="flex__child button__container">
+      <a href="https://ardorcarecompany.clearcareonline.com/apply/" target="_blank" class="button">
+        Employment
+      </a>
+    </div>
+
+  </div>
+
 </header>
 
 
@@ -92,7 +103,7 @@
         
           40 Lake Bellevue Dr Ste 100,<br/>
         
-          Bellevue, Wa 98005<br/>
+          Bellevue, WA 98005<br/>
         
       </address>
     </td>
@@ -104,9 +115,7 @@
       </main>
     
 
-      
-      <script src='js/main.min.js'></script>
-      
+      <script src='js/main.js'></script>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
