@@ -1,9 +1,80 @@
 {% extends "page.html" %}
+{% set service = services[1] %}
 
 {% block header %}
-  {{ services[1].title | title }}
+  {{ service.pageHeader | title }}
 {% endblock %}
 
 {% block body %}
+<div class="flex service">
+  <div class="flex__col">
+    <h2 class="center">{{ service.pageHeader | title }}</h2>
 
+    <ul class="tabs__navigation">
+      <li id="tab--info">
+        {{ service.infoHeader }}
+      </li>
+      <li id="tab--services">
+        {{service.ratesHeader }}
+      </li>
+    </ul>
+
+    <div class="tabs">
+      <div class="tabs__content tab" id="tab__content--info">
+        <div class="flex">
+          <div class="flex__col flex__col--content">
+            {% for info in service.info  %}
+              <p>
+                {{ info }}
+              </p>
+            {% endfor %}
+          </div>
+          <div class="flex__col flex__col--image">
+            <img src="img/info__{{ service.id }}.jpg" alt="{{ service }}" />
+          </div>
+        </div>
+      </div>
+      <div class="tabs__content tab" id="tab__content--services">
+        <div class="tab-service">
+          {% for rate in service.rates  %}
+          <div class="services--rate">
+            <div class="flex">
+              <div class="flex__col tab__service">
+                {{ rate.header }}
+              </div>
+              <div class="flex__col tab__rate">
+                {% if rate.hourly %}
+                  {{ rate.hourly }}/Hourly
+                {% endif %}
+
+                {% if rate.daily %}
+                  {{ rate.daily }}/Daily
+                {% endif %}
+              </div>
+            </div>
+            <p class="tab__keypoints {% if loop.index0 === 0 %}active{% endif %}">
+              <span class="read-more"></span> {{ rate.keypoints }}
+            </p>
+
+            <div class="tab__description" aria-hidden="{% if loop.index0 === 0 %}false{% else %}true{% endif %}">
+              {% if rate.description %}
+                <p>
+                  {{ rate.description }}
+                </p>
+              {% else %}
+                {% for list in rate.descriptions  %}
+                  <p>
+                    <strong>{{ list.header }}</strong><br/>
+                    {{ list.copy }}
+                  </p>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

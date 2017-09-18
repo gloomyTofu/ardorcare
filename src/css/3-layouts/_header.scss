@@ -15,6 +15,29 @@
     text-decoration: none;
     color: $color__font;
     align-items: center;
+
+    &.button {
+      float: right;
+      color: white;
+    }
+  }
+
+  & > .flex {
+    justify-content: space-between;
+    align-items: center; 
+
+    @include breakpoint(mobile) {
+      .flex__child.logo {
+        .flex__mobile {
+          padding: 0;
+        }
+      }
+
+      .flex__child.button__container .button {
+        font-size: 0.95em;
+        padding: 0 $space;
+      }
+    }
   }
 
   h1 {

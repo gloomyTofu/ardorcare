@@ -4,6 +4,7 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   del = require('del'),
   uglify = require('gulp-uglify'),
+  pump = require('pump'),
   cleanCSS = require('gulp-clean-css'),
   sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
@@ -15,7 +16,10 @@ const gulp = require('gulp'),
   	neither:['src/*.html', 'src/pages/*.html'],
   	styles:['src/css/**/*.scss', 'src/css/*.scss'],
   	styleSheet:['src/css/main.scss'],
-  	scripts:['src/js/vendor/anime.js', 'node_modules/vanilla-router/dist/vanilla-router.min.js', 'src/js/*.js','src/js/components/*.js'],
+  	scripts:[
+      'node_modules/animejs/anime.min.js', 'node_modules/vanilla-router/dist/vanilla-router.min.js', 'src/js/*.js',
+      'src/js/components/*.js'
+    ],
   	images:['src/img/*.jpg', 'src/img/**/*'],
   	svgs:['src/**/*.svg'],
     info:['src/*.png', 'src/*.xml', 'src/*.ico', 'src/*.txt']
@@ -56,18 +60,23 @@ gulp.task('build:styles',function(){
 	return task;
 });
 
-gulp.task('build:scripts',function(){
-	var dest = flags.prod?'dist/js':'build/js';
-	var name = flags.prod?'main.js':'main.js';
-	var task = gulp.src(paths.scripts)
-	.pipe(concat(name, {newline:''}));
-	if(flags.prod){
-		task = task.pipe(strip())
-		.pipe(uglify({mangle:true}));
-	}
-	task = task.pipe(gulp.dest(dest))
-	.pipe(connect.reload());
-	return task;
+gulp.task('build:scripts', function (callback) {
+  var dest = flags.prod?'dist/js':'build/js';
+  var name = flags.prod?'main.js':'main.js';
+  if(flags.prod){
+    pump([
+      gulp.src(paths.scripts),
+      strip(),
+      uglify({ mangle:true }),
+      gulp.dest(dest)
+    ], callback);
+  } else {
+    var task = gulp.src(paths.scripts)
+      .pipe(concat(name, {newline:''}))
+      .pipe(gulp.dest(dest))
+      .pipe(connect.reload());
+  	return task;
+  }
 });
 
 gulp.task('build:scripts:vendor',function(){

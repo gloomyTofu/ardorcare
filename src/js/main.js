@@ -50,17 +50,20 @@ var rates = {
 function getEventListener() {
   var tabInfo = rates.getElementId('tab--info');
   var tabServices = rates.getElementId('tab--services');
+  var tabContentInfo = rates.getElementId('tab__content--info');
+  var tabContentServices = rates.getElementId('tab__content--services');
   tabInfo.classList.add('active');
+  tabContentInfo.classList.add('active');
 
-  rates.eventHandler(tabInfo, 'click', function(event) {
+  var toggleActiveState = function() {
     rates.toggleClass(tabInfo, 'active');
     rates.toggleClass(tabServices, 'active');
-  });
+    rates.toggleClass(tabContentInfo, 'active');
+    rates.toggleClass(tabContentServices, 'active');
+  }
 
-  rates.eventHandler(tabServices, 'click', function(event) {
-    rates.toggleClass(tabInfo, 'active');
-    rates.toggleClass(tabServices, 'active');
-  });
+  rates.eventHandler(tabInfo, 'click', toggleActiveState);
+  rates.eventHandler(tabServices, 'click', toggleActiveState);
 
   var keypoints = rates.getElementClassName('tab__keypoints');
   for (var i = 0; i < keypoints.length; i++) {

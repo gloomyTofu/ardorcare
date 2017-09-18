@@ -1,3 +1,7 @@
+#content__container {
+  min-height: 75vh;
+}
+
 section {
   width: 100%;
 }
@@ -15,6 +19,14 @@ section {
     flex: 1 0 auto;
     padding: $padding;
     box-sizing: border-box;
+
+    &--content, &--image {
+      margin-bottom: $space--large;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__mobile {
@@ -31,6 +43,10 @@ section {
   }
 }
 
+.justify__content--between {
+  justify-content: space-between;
+}
+
 @include breakpoint(tablet__portrait) {
   .flex {
     flex-direction: row;
@@ -39,6 +55,17 @@ section {
       padding: 0;
       margin: $gutter $gutter $gutter;
       flex: 1 0 auto; // IE Fix
+
+      &--content, &--image {
+        flex: 1 0;
+        //order: 1;
+      }
+
+      &--content + .flex__col--image {
+        //order: 0;
+      }
+
+
     }
 
     &__col--66 {
@@ -63,6 +90,12 @@ section {
       margin: 0;
       padding: $gutter $gutter $gutter;
       flex: 0 1 25%;
+    }
+
+    &__col--18 {
+      margin: 0;
+      padding: $gutter $gutter $gutter;
+      flex: 0 1 18%;
     }
   }
 }
@@ -100,7 +133,7 @@ section {
 }
 
 // Child Positioning
-.flex__col {
+.flex__col, .flex__child {
   &--top {
     align-self: flex-start;
     margin-top: $gutter*2;

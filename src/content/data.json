@@ -3,6 +3,10 @@
   "path": "/",
   "title": "Ardor Care Company",
   "logo": "svg/ardor_care_logo.svg",
+  "career": {
+    "button": "Employment",
+    "url": "https://ardorcarecompany.clearcareonline.com/apply/"
+  },
   "tagline": "Home Care Services",
   "about": [
     "Ardor Care Company is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.",
@@ -27,6 +31,20 @@
       "Bellevue, WA 98005"
     ]
   },
+  "social": [
+    {
+      "name": "facebook",
+      "url": "https://www.facebook.com/ardorcarecompany/"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/ardorcareco"
+    },
+    {
+      "name": "instagram",
+      "url": "https://www.instagram.com/ardorcarecompany/"
+    }
+  ],
   "services": [
     {
       "id": "seniorcare",
@@ -45,7 +63,6 @@
       "rates": [{
         "header": "Home Care Services",
         "keypoints": "Non-medical caregiver",
-        "description": "Personalized care that reflects each individuals needs: Activity Support, Companionship, Condition Specific Care, Household Chores and Personal Care (ADLs and IADLs).",
         "descriptions": [
           {
             "header": "Personal Care",
@@ -82,13 +99,41 @@
       "title": "childcare",
       "short": "Customized home child care",
       "button": "Our Services",
+      "pageHeader": "In-Home Child Care Services",
+      "infoHeader": "Information",
       "info": [
-
+        "Ardor Care Company offers a wide range of in-home child care options for your family’s needs.",
+        "Caring for your littlest loved ones in the comforts of a familiar setting is our commitment.",
+        "Whether you’re a busy family that needs a sitter periodically on a regular basis, or if you’re in a a bind and need reliable child care at the drop of a dime, we can help.",
+        "We offer individualized plan of care based on your families needs and specifications, we will match your family with a dedicated child care sitter or nanny that you will be comfortable and happy with.",
+        "Each of our caregivers is held to the highest standard in providing the utmost in safety and quality, security for your family is our promise."
       ],
+      "ratesHeader": "Our Services",
       "rates": [{
         "header": "Sitter Services",
         "keypoints": "in-home child care",
-        "description": "Customized in home child care to give personalized attention to the family’s children(s). Provides activity support, companionship, personal care, supervision and custodial care.",
+        "descriptions": [
+          {
+            "header": "Sitter Services",
+            "copy": "Ardor Care Company provides customized in home child care to give personalized attention to the family’s children(s). Provides activity support, companionship, personal care, supervision and custodial care."
+          },
+          {
+            "header": "Newborn Care",
+            "copy": "For new moms and busy parents, help with newborn and infant care can give you much needed time to rest and catch up on other responsibilities.  Our experience childcare sitters will help with bathing, feeding, and diapering, as well as providing interactions and contact babies need."
+          },
+          {
+            "header": "Mommy & Baby Care",
+            "copy": "Ardor Care Company offers a range of services for mom and baby’s needs after pregnancy and childbirth including personal care assistance, housekeeping, meal prep, transportation, activities support and sibling transition. "
+          },
+          {
+            "header": "Mild Ill Child Care",
+            "copy": "Working parents often face the dilemma of choosing between a sick child and their work responsibilities.  Let our experienced child caregiver help relieve your conflict and take good care of your sick child at home all day while you work.  Our childcare sitter  will keep your child comfortable and provide the gentle care they need to be on the road to recovery."
+          },
+          {
+            "header": "Vacation & Holiday Care",
+            "copy": "When the kids are out of school, let Ardor Care provide care for the kids who will appreciate being able to relax and sleep in their own bed instead of the whole family having to rush off to daycare. And for longer breaks, or when school is out for the summer, let our staff keep the kids busy and active. "
+          }
+        ],
         "hourly": "$30.00"
       }]
     }

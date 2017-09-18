@@ -37,6 +37,10 @@ router
   .add('childcare', function() {
     console.log('childcare page');
     getRoute('childcare.html');
+
+    setTimeout(function() {
+      getEventListener();
+    }, 250);
   })
   .check()
   .addUriListener()

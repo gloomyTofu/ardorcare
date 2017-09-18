@@ -33,6 +33,7 @@ button, .button, input[type="button"], input[type="submit"] {
 }
 
 .button {
+  display: inline-block;
   text-decoration: none;
 
   &:hover, &:focus {

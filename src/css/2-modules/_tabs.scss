@@ -22,6 +22,27 @@
       transition: background-color 0.12s $ease-in-out-sine, color 0.12s $ease-in-out-sine;
     }
   }
+
+  &__content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.12s $ease-in-sine;
+
+    .flex, .tab-service {
+      height: 0;
+    }
+
+    &.active {
+      opacity: 1;
+      min-height: 50vh;
+      visibility: visible;
+      transition: opacity 0.12s $ease-out-sine;
+    }
+
+    &.active .flex, &.active .tab-service {
+      height: auto;
+    }
+  }
 }
 
 .tab {
@@ -48,6 +69,7 @@
   &__keypoints {
     cursor: pointer;
     color: rgba($color__base, 0.75);
+    margin-bottom: 5px;
 
     span.read-more {
       pointer-events: none;
@@ -59,6 +81,10 @@
 
     &.active span.read-more::before {
       content: '-';
+    }
+
+    + .tab__description {
+      margin-bottom: $space;
     }
   }
 
@@ -73,7 +99,6 @@
 
   p {
     margin-top: 0;
-    margin-bottom: $space;
   }
 
   .flex {
@@ -95,13 +120,17 @@
       padding-bottom: $space--large * 2;
     }
 
-    .services--rate {
-      margin-bottom: $space--large * 2;
-    }
-
     .flex.content {
       padding: $padding * 3 $padding;
       margin: 10vh auto 0;
+      max-width: 75%;
+    }
+
+    &__keypoints {
+
+    }
+
+    &__keypoints + .tab__description {
       max-width: 75%;
     }
   }

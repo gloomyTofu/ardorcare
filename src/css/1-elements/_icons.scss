@@ -1,0 +1,38 @@
+.social__icons {
+  margin-bottom: $space--large;
+  
+  @include breakpoint(tablet__portrait) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  a {
+    display: block;
+    background: url(../svg/icon__social.svg);
+    background-position: 0 0;
+    background-size: 30px auto;
+    width: 30px;
+    height: 30px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  a[name=facebook] {
+    background-position: 0 0;
+  }
+
+  a[name=twitter] {
+    background-position: 0 -30px;
+  }
+
+  a[name=instagram] {
+    background-position: 0 -60px;
+  }
+}

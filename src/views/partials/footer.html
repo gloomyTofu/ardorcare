@@ -5,8 +5,19 @@
         Contact us
       </h1>
     </div>
-    <div class="flex__col flex__col--50">
+    <div class="flex__col flex__col--33">
       {% include "partials/contact.html" %}
+    </div>
+    <div class="flex__col flex__col--18">
+      <ul class="social__icons">
+        {% for social in social %}
+          <li>
+            <a href="{{ social.url }}" target="_blank" name="{{ social.name }}">
+              {{ social.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </footer>
