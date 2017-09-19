@@ -63,20 +63,28 @@ gulp.task('build:styles',function(){
 gulp.task('build:scripts', function (callback) {
   var dest = flags.prod?'dist/js':'build/js';
   var name = flags.prod?'main.js':'main.js';
-  if(flags.prod){
-    pump([
-      gulp.src(paths.scripts),
-      strip(),
-      uglify({ mangle:true }),
-      gulp.dest(dest)
-    ], callback);
-  } else {
-    var task = gulp.src(paths.scripts)
-      .pipe(concat(name, {newline:''}))
-      .pipe(gulp.dest(dest))
-      .pipe(connect.reload());
-  	return task;
-  }
+  var task = gulp.src(paths.scripts)
+  .pipe(concat(name, {newline:''}));
+	if(flags.prod){
+		task = task.pipe(strip())
+		.pipe(uglify({mangle:true}));
+	}
+	task = task.pipe(gulp.dest(dest));
+	return task;
+  // if(flags.prod){
+  //   pump([
+  //     gulp.src(paths.scripts),
+  //     strip(),
+  //     uglify({ mangle:true }),
+  //     gulp.dest(dest)
+  //   ], callback);
+  // } else {
+  //
+  //     .pipe(concat(name, {newline:''}))
+  //     .pipe(gulp.dest(dest))
+  //     .pipe(connect.reload());
+  // 	return task;
+  // }
 });
 
 gulp.task('build:scripts:vendor',function(){
