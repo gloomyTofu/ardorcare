@@ -1,10 +1,3 @@
-var router = new Router({
-  mode: 'history',
-  page404: function (path) {
-      console.log('"/' + path + '" Page not found');
-  }
-});
-
 var xmlhttp = new XMLHttpRequest(),
     method = 'GET',
     content__container = document.getElementById('content__container');
@@ -18,6 +11,13 @@ var getRoute = function(path) {
   }
   xmlhttp.send();
 }
+
+var router = new Router({
+  mode: 'history',
+  page404: function (path) {
+    console.log('"/' + path + '" Page not found');
+  }
+});
 
 router
   .add('', function() {
@@ -49,5 +49,6 @@ router
   })
   .check()
   .addUriListener()
+  .navigateTo('');
 
   window.router = router;
