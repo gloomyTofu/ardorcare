@@ -26,6 +26,7 @@
   &__content {
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
     transition: opacity 0.12s $ease-in-sine;
 
     .flex, .tab-service {
@@ -36,6 +37,7 @@
       opacity: 1;
       min-height: 50vh;
       visibility: visible;
+      overflow: visible;
       transition: opacity 0.12s $ease-out-sine;
     }
 

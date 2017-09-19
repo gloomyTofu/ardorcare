@@ -4,7 +4,7 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
         <title>
-  Ardor Care Company Coming Soon
+  Ardor Care Company
 </title>
         <meta name='description' content=''>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="flex__child button__container">
-      <a href="https://ardorcarecompany.clearcareonline.com/apply/" target="_blank" class="button">
+      <a href="https://ardorcarecompany.clearcareonline.com/apply/" target="_blank" class="button routing">
         Employment
       </a>
     </div>
@@ -44,22 +44,19 @@
 
 
       
-      <h1 class='descriptive'>Ardor Care Company</h1>
-      
-      <main class="main">
-        <div class="main__contents">
-          <section>
-            <img src="svg/ardor_care_logo.svg" alt="Ardor Care Company Logo"/>
-            <h1>Ardor</h1>
-            <p>
-              Care Company
-            </p>
-          </section>
-          <section class="message">
-            <h1>Site Coming Soon</h1>
-          </section>
-          <section class="info">
-            <table class="info__content">
+      <div id="content__container">
+
+      </div>
+
+      <footer>
+  <div class="flex">
+    <div class="flex__col flex__col--33 flex__col-left--2">
+      <h1 class="header--line">
+        Contact us
+      </h1>
+    </div>
+    <div class="flex__col flex__col--33">
+      <table class="info__content">
   <tr>
     <td>
       O:
@@ -110,9 +107,34 @@
   </tr>
 </table>
 
-          </section>
-        </div>
-      </main>
+    </div>
+    <div class="flex__col flex__col--18">
+      <ul class="social__icons">
+        
+          <li>
+            <a href="https://www.facebook.com/ardorcarecompany/" target="_blank" name="facebook">
+              facebook
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://twitter.com/ardorcareco" target="_blank" name="twitter">
+              twitter
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://www.instagram.com/ardorcarecompany/" target="_blank" name="instagram">
+              instagram
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
     
 
       <script src='js/main.js'></script>
