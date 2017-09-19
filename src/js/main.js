@@ -52,6 +52,7 @@ function preventLinkDefault() {
   for (var i = 0; i < routingLink.length; i++) {
     routingLink[i].addEventListener('click', function(e) {
       e.preventDefault();
+      router.navigateTo(e.target.getAttribute('href'));
     });
   }
 }
