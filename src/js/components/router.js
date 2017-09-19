@@ -27,7 +27,7 @@ router
     getRoute('homepage.html');
   })
 
-  .add('seniorcare', function() {
+  .add(baseURL + '/seniorcare', function() {
     console.log('senior care page');
     getRoute('seniorcare.html');
 
@@ -36,7 +36,7 @@ router
     }, 250);
   })
 
-  .add('childcare', function() {
+  .add(baseURL + '/childcare', function() {
     console.log('childcare page');
     getRoute('childcare.html');
 
