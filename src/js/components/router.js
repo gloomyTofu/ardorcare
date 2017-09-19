@@ -19,7 +19,7 @@ var getRoute = function(path) {
   xmlhttp.send();
 }
 
-  var baseURL = 'ardorcare/';
+  var baseURL = '/ardorcare';
 
 router
   .add(baseURL + '', function() {
@@ -27,7 +27,7 @@ router
     getRoute('homepage.html');
   })
 
-  .add(baseURL + 'seniorcare', function() {
+  .add('seniorcare', function() {
     console.log('senior care page');
     getRoute('seniorcare.html');
 
@@ -36,7 +36,7 @@ router
     }, 250);
   })
 
-  .add(baseURL + 'childcare', function() {
+  .add('childcare', function() {
     console.log('childcare page');
     getRoute('childcare.html');
 
