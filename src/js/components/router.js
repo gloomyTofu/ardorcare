@@ -19,15 +19,18 @@ var getRoute = function(path) {
   xmlhttp.send();
 }
 
-  var baseURL = '/ardorcare';
-
 router
-  .add(baseURL + '', function() {
+  .add('', function() {
     console.log('home page');
     getRoute('homepage.html');
+
+    setTimeout(function() {
+      preventLinkDefault();
+      console.log('prevent default!');
+    }, 250);
   })
 
-  .add(baseURL + '/seniorcare', function() {
+  .add('seniorcare', function() {
     console.log('senior care page');
     getRoute('seniorcare.html');
 
@@ -36,7 +39,7 @@ router
     }, 250);
   })
 
-  .add(baseURL + '/childcare', function() {
+  .add('childcare', function() {
     console.log('childcare page');
     getRoute('childcare.html');
 

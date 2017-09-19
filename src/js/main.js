@@ -47,6 +47,15 @@ var rates = {
   }
 }
 
+function preventLinkDefault() {
+  var routingLink = document.getElementsByClassName('routing');
+  for (var i = 0; i < routingLink.length; i++) {
+    routingLink[i].addEventListener('click', function(e) {
+      e.preventDefault();
+    });
+  }
+}
+
 function getEventListener() {
   var tabInfo = rates.getElementId('tab--info');
   var tabServices = rates.getElementId('tab--services');
