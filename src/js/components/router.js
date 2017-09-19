@@ -16,6 +16,7 @@ var router = new Router({
   mode: 'history',
   page404: function (path) {
     console.log('"/' + path + '" Page not found');
+    goHomePage();
   }
 });
 
@@ -48,7 +49,10 @@ router
     }, 250);
   })
   .check()
-  .addUriListener()
-  .navigateTo('');
+  .addUriListener();
 
   window.router = router;
+
+  function goHomePage() {
+    router.navigateTo('');
+  }
