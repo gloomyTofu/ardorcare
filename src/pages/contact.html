@@ -1,0 +1,75 @@
+{% extends "page.html" %}
+{% set title = 'Contact Us' %}
+
+{% block header %}
+  {{ title }}
+{% endblock %}
+
+{% block body %}
+  <div class="flex">
+    <div class="flex__col">
+      <h1>
+        {{ title }}
+      </h1>
+      <p class="line-length">
+        Ardor Care Company is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.
+      </p>
+      <p class="line-length">
+        Interested in learning more about our services? <br/>
+        Fill out the form below and we'll get back to you as soon as possible.
+      </p>
+      <form action="https://formspree.io/info@ardorcarecompany.com" method="POST">
+        <div class="form__row">
+          <div class="form__row--item">
+            <label for="service-type">
+              Service
+            </label>
+            <select id="service-type" name="_subject" required>
+              <option selected="true" disabled value="">
+                --Please Select One---
+              </option>
+              <option value="In-Home Senior Care">
+                In-Home Senior/Companion Care
+              </option>
+              <option value="In-Home Senior Care">
+                In-Home Child Care
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__row--item">
+            <label for="first-name">First Name</label>
+            <input type="text" placeholder="First Name" id="first-name" name="FirstName"/ required>
+          </div>
+          <div class="form__row--item">
+            <label for="last-name">Last Name</label>
+            <input type="text" placeholder="Last Name" id="last-name" name="LastName" required/>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__row--item">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" id="email" name="Email" required/>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__row--item">
+            <label for="comment">Comments</label>
+            <textarea name="comment" placeholder="Comment" required></textarea>
+          </div>
+        </div>
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_next" value="thanks" />
+        <div class="form__row submit">
+          <div class="form__row--item message">
+            <small>*All Fields Required</small>
+          </div>
+          <div class="form__row--item">
+            <input type="submit" value="Send">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

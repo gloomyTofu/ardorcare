@@ -2,6 +2,24 @@
   color: $color__primary;
 }
 
+.line-length {
+  max-width: 650px;
+}
+
+a {
+  font-family: $font__primary;
+  color: $color__primary;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  .carat__right svg {
+    fill: $color__primary;
+  }
+}
+
 span.block {
   display: block;
 }

@@ -11,6 +11,7 @@ button, .button, input[type="button"], input[type="submit"] {
   font-family: $font__primary;
   color: set-text-color($color__primary);
   background-color: $color__primary;
+  border: 2px solid $color__primary;
   margin: $space--medium 0;
   padding: 0 $space--large * 1.5;
   cursor: pointer;
@@ -23,11 +24,13 @@ button, .button, input[type="button"], input[type="submit"] {
   &:hover, &:focus {
     color: set-text-color($color__primary--dark);
     background-color: $color__primary--dark;
+    border: 2px solid $color__primary;
   }
 
   &[disabled] {
     color: transparentize($color__font, 0.8);
     background-color: transparentize($color__primary, 0.8);
+    border: 2px solid transparentize($color__primary, 0.8);
     cursor: default;
   }
 }
@@ -43,20 +46,41 @@ button, .button, input[type="button"], input[type="submit"] {
   &--secondary {
     color: set-text-color($color__secondary);
     background-color: $color__secondary;
+    border: 2px solid $color__secondary;
 
     &:hover, &:focus {
       color: set-text-color($color__secondary--light);
       background-color: $color__secondary--light;
+      border: 2px solid $color__secondary;
     }
   }
 
   &--accent {
     color: set-text-color($color__accent);
     background-color: $color__accent;
+    border: 2px solid $color__accent;
 
     &:hover, &:focus {
       color: set-text-color($color__accent--dark);
       background-color: $color__accent--dark;
+      border: 2px solid $color__accent--dark;
     }
+  }
+
+  &--inverse {
+    color: $color__primary !important;
+    background-color: white;
+
+    &:hover, &:focus {
+      color: $color__primary--dark !important;
+      background-color: white;
+      border-color: $color__primary--dark; 
+    }
+  }
+}
+
+.button__container {
+  .button {
+    margin-right: 10px;
   }
 }

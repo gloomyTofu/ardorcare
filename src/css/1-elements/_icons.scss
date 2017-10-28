@@ -1,6 +1,6 @@
 .social__icons {
   margin-bottom: $space--large;
-  
+
   @include breakpoint(tablet__portrait) {
     display: flex;
     justify-content: flex-end;
@@ -34,5 +34,16 @@
 
   a[name=instagram] {
     background-position: 0 -60px;
+  }
+}
+
+.carat {
+  &__right {
+    position: relative;
+    left: -5px;
+
+    svg {
+      transform: rotate(-90deg);
+    }
   }
 }

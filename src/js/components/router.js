@@ -48,6 +48,17 @@ router
       getEventListener();
     }, 250);
   })
+
+  .add('contact', function() {
+    console.log('contact page');
+    getRoute('contact.html');
+  })
+
+  .add('thanks', function() {
+    console.log('contact thank you page');
+    getRoute('thanks.html');
+  })
+
   .check()
   .addUriListener();
 

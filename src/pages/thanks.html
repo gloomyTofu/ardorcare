@@ -1,0 +1,30 @@
+{% extends "page.html" %}
+{% set title = 'Contact Us' %}
+
+{% block header %}
+  {{ title }}
+{% endblock %}
+
+{% block body %}
+<div class="flex">
+  <div class="flex__col">
+    <h1>
+      {{ title }}
+    </h1>
+    <p class="line-length">
+      Ardor Care Company is a home care agency headquartered in Bellevue, which provides service programs to enhance the lives of seniors and children in King, Pierce, and Snohomish County.
+    </p>
+    <div id="confirmation">
+      <h2>Thank you for contacting us.</h2>
+      <p>
+        We'll be in touch with you shortly.
+        <a href="/" class="padding--left"> Return to Homepage
+          <span class="carat__right">
+            {% include "svg/carat.html" %}
+          </span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

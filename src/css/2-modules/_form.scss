@@ -1,3 +1,123 @@
+%placeholder {
+  font-size: 0.85em;
+  color: darken($color__base--border, 20%);
+}
+
 fieldset input {
   margin-bottom: $space--medium;
+}
+
+form {
+  margin-top: $space--large*2;
+  max-width: 650px;
+
+  label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-family: $font__primary;
+    margin-bottom: $space--small;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: $space;
+    border: 1px solid $color__base--highlight;
+    background-color: white;
+    border-radius: 0;
+    box-sizing: border-box;
+
+    &::placeholder {
+      @extend %placeholder;
+    }
+  }
+
+  select {
+    appearance: none;
+    height: 42px;
+    background: url(../svg/carat.svg) no-repeat 98% 50%;
+    background-size: 20px 20px;
+    padding-right: 30px;
+
+    option[disabled] {
+      @extend %placeholder;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  input[type=submit] {
+    width: 100px;
+    float: right;
+    margin-top: 0;
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  @include breakpoint(tablet__portrait) {
+    select {
+      padding-right: 45px;
+    }
+  }
+}
+
+.form {
+  &__row {
+
+    &.submit {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &--item {
+      width: 100%;
+      margin-bottom: $space--large;
+    }
+  }
+
+  @include breakpoint(tablet__portrait) {
+    &__row {
+      display: flex;
+    }
+
+    &__row--item {
+
+    }
+
+    &__row--item + .form__row--item {
+      margin-left: $space--large + $space--small;
+    }
+  }
+}
+
+.message small {
+  color: $color__secondary; 
+  font-family: $font__primary;
+}
+
+#confirmation {
+  margin-top: $space--large + $space;
+  border: 3px solid $color__primary;
+  padding: $space $space--large;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 650px;
+
+  h2 {
+    margin-bottom: 0;
+
+    & + p {
+      margin-top: $space;
+    }
+  }
+
+    @include breakpoint(tablet__portrait) {
+
+    }
 }
